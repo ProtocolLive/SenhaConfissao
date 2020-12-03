@@ -1,8 +1,8 @@
 <?php
 require_once("system.php");
 
-if(isset($_GET["padre"])){
-  if(isset($_GET["a"])){
+if(isset($_GET["padre"])):
+  if(isset($_GET["a"])):
     $data = Load();
     $data["padres"][$_GET["padre"]] = 0;
     Save($data);
@@ -11,7 +11,7 @@ if(isset($_GET["padre"])){
     require_once("head.php");?>
     <p>Chamado realizado</p><?php
     require_once("foot.htm");
-  }else{
+  else:
     $data = Load();
     $data["padres"][$_GET["padre"]] = 1;
     Save($data);
@@ -21,13 +21,13 @@ if(isset($_GET["padre"])){
     <p><input type="button" value="CHAMAR" style="width:100px; height: 100px;"
       onclick="location.href='padre.php?padre=<?php echo $_GET["padre"];?>&a=1'"></p><?php
     require_once("foot.htm");
-  }
-}else{
+  endif;
+else:
   $HTML["title"] = "Chamada pra confissão";
   require_once("head.php");
   $data = Load();
-  foreach($data["padres"] as $padre => $status){?>
+  foreach($data["padres"] as $padre => $status):?>
     <p><a href="padre.php?padre=<?php echo $padre;?>"><?php echo $padre;?></a></p><?php
-  }
+  endforeach;
   require_once("foot.htm");
-}
+endif;
