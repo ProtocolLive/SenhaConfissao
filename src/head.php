@@ -1,12 +1,12 @@
 <html>
   <head>
-    <title><?php echo $HTML["title"];?></title>
+    <title><?php echo $HTML['title'];?></title>
     <meta name="viewport" content="width=device-width">
     <?php
-    if(isset($HTML["refresh"])):
-      ?><meta http-equiv="refresh" content="<?php echo $HTML["refresh"][0];
-      if(isset($HTML["refresh"][1])):
-        echo "; url=" . $HTML["refresh"][1];
+    if(isset($HTML['refresh'])):
+      ?><meta http-equiv="refresh" content="<?php echo $HTML['refresh'][0];
+      if(isset($HTML['refresh'][1])):
+        echo '; url=' . $HTML['refresh'][1];
       endif;
       ?>"><?php
     endif;?>
@@ -27,9 +27,9 @@
         margin-left: auto;
         margin-right: auto;
       }<?php
-      if(isset($HTML["bgcolor"])):?>
+      if(isset($HTML['bgcolor'])):?>
         body{
-          background-color: <?php echo $HTML["bgcolor"];?>
+          background-color: <?php echo $HTML['bgcolor'];?>
         }<?php
       endif;?>
     </style>

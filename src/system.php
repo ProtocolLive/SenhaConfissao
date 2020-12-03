@@ -8,4 +8,4 @@ ini_set('date.timezone', 'America/Bahia');
 setlocale(LC_ALL, 'pt_BR');
 ini_set('max_execution_time', '30');
 
-require_once("functions.php");
+require_once('functions.php');
