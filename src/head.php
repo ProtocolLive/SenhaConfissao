@@ -6,7 +6,7 @@
     if(isset($HTML['refresh'])):
       ?><meta http-equiv="refresh" content="<?php echo $HTML['refresh'][0];
       if(isset($HTML['refresh'][1])):
-        echo '; url=' . $HTML['refresh'][1];
+        echo ';url=' . $HTML['refresh'][1];
       endif;
       ?>"><?php
     endif;?>

@@ -8,7 +8,9 @@ require_once('head.php');
 $data = Load();
 foreach($data['padres'] as $padre => $status):
   if($status == 0):?>
-    <div style="font-size: 120px; color: white; text-align:center;"><strong><?php echo $padre;?></strong></div><br><?php
+    <div style="font-size:120px;color:white;text-align:center">
+      <strong><?php echo $padre;?></strong>
+    </div><br><?php
   endif;
 endforeach;
 require_once('foot.htm');
