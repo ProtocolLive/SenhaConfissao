@@ -1,10 +1,11 @@
 <?php
+//2022.12.20.00
 require_once('system.php');
 
 if(isset($_GET['a'])):
   $data = Load();
   foreach($_POST as $padre => $status):
-    $data['padres'][$padre] = $status;
+    $data['padres'][$padre] = (int)$status;
   endforeach;
   Save($data);
   header('Location:chamar.php');
