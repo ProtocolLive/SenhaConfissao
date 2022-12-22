@@ -3,13 +3,13 @@ require_once('system.php');
 
 if(isset($_GET['a'])):
   $data = Load();
-  $envio = explode(PHP_EOL, trim($_POST['padres']));
   $data['padres'] = null;
+  $envio = explode(PHP_EOL, trim($_POST['padres']));
   foreach($envio as $padre):
-    $data['padres'][$padre] = 0;
+    $data['padres'][trim($padre)] = 1;
   endforeach;
   Save($data);
-  header('Location:config.php');
+  header('Location:chamar.php');
 else:
   $data = Load();
   $HTML['title'] = 'Configurações';
